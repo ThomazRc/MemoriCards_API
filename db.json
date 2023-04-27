@@ -6,6 +6,14 @@
       "name": "Kenzinho",
       "age": 38,
       "id": 1
+    },
+    {
+      "email": "kenzinho2@mail.com",
+      "password": "$2a$10$inkMXFPw2KJWb.DbLA/I5ujgwZxQW5buCxUUxblE5OuMHPtDcSnnm",
+      "image": "",
+      "username": "teste",
+      "id": 2
     }
-  ]
+  ],
+  "flashcards": []
 }
