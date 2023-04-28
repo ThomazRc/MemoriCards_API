@@ -18,15 +18,9 @@ A url base da API é https://memori-cards-api.onrender.com
 {
   "email": "kenzinho2@mail.com",
   "password": "$2a$10$inkMXFPw2KJWb.DbLA/I5ujgwZxQW5buCxUUxblE5OuMHPtDcSnnm",
-  "image": "",
-  "username": "teste",
   "id": 1,
 }
 ```
-
-POST /register <br/>
-POST /signup <br/>
-POST /users
 
 <br>
 
@@ -41,17 +35,56 @@ POST /users
 }
 ```
 
-POST /login <br/>
-POST /signin
-
 ## Endpoints que necessitam de token
 
-### Cards
+### flashcards
 
-`GET /flashcards - FORMATO DA REQUISIÇÃO`
+`GET /flashcards/:userId - FORMATO DA REQUISIÇÃO`
+
+```json
+[
+	{
+	  "question":"Quem descobriu a ámerica",
+	  "answer":"Cristovão colombo",
+	  "userId":1
+	},
+	{
+	  "question":"Qual a formula da agua?",
+	  "answer":"H2O",
+	  "userId":2
+	}
+
+    {...}
+]
+```
+
+### Criar flashcard
+
+`POST /flashcards/:userId - FORMATO DA REQUISIÇÃO`
 
 ```json
 {
-  Em construção...
+  "question":"Qual a capital do japão?",
+  "answer":"Tokyo",
+  "userId":3
 }
 ```
+
+### Excluir flashcard
+
+`DELETE /flashcards/:userId - FORMATO DA REQUISIÇÃO`
+
+
+### Editar flashcard
+
+`PATCH /flashcards/:userId - FORMATO DA REQUISIÇÃO`
+
+```json
+{
+  "question":"teste2",
+  "answer": "12356"
+}
+```
+
+
+
